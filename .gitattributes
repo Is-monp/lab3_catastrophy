@@ -1,2 +1,31 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Windows-specific settings
+*.cs     text eol=crlf
+*.shader text eol=lf
+
+# Image files should be treated as binary
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+
+# Unity specific binary file types
+*.unity  binary
+*.asset  binary
+*.mat    binary
+*.fbx    binary
+*.prefab binary
+
+# Audio files
+*.mp3    binary
+*.wav    binary
+*.ogg    binary
+
+# Video files
+*.mp4    binary
+*.mov    binary
+
+# Other binary files
+*.dll    binary
+*.exe    binary
