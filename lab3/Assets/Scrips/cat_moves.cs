@@ -7,10 +7,12 @@ public class cat_moves : MonoBehaviour
 {
     [SerializeField] private float speed;
     private Rigidbody2D mybody;
+    private Animator myAnimator;
 
     private void Awake()
     {
         mybody = GetComponent<Rigidbody2D>();
+        myAnimator = GetComponent<Animator>();
 
     }
 
@@ -18,6 +20,7 @@ public class cat_moves : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         mybody.velocity = new Vector2(horizontalInput * speed, mybody.velocity.y);
+        myAnimator.SetFloat("Horizontal", Mathf.Abs(horizontalInput));
 
         if (horizontalInput > 0.01f)
             transform.localScale = Vector3.one;
