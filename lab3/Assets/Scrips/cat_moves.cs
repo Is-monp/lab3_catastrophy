@@ -6,6 +6,7 @@ using UnityEngine;
 public class cat_moves : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private float jumpspeed;
     private Rigidbody2D mybody;
     private Animator myAnimator;
 
@@ -28,7 +29,7 @@ public class cat_moves : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         if (Input.GetKey("w")&& checkinGround.isGrounded)
         {
-            mybody.velocity=new Vector2(mybody.velocity.x, speed);
+            mybody.velocity=new Vector2(mybody.velocity.x, jumpspeed);
         }
     }
 }
