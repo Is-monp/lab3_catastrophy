@@ -549,6 +549,7 @@ MonoBehaviour:
   jumpspeed: 3
   mybody: {fileID: 1202906476650506601}
   myAnimator: {fileID: 807735108415187986}
+  mycollider: {fileID: 0}
   PlayerCamera: {fileID: 2127459214980091684}
   PlayerName: {fileID: 4893515714981124407}
   sr: {fileID: 1631031019071020418}

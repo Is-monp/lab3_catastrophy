@@ -21,12 +21,15 @@ public class MenuController : MonoBehaviourPunCallbacks
     private void Awake()
     {
         PhotonNetwork.PhotonServerSettings.AppSettings.AppVersion = VersionName;
+        PhotonNetwork.SendRate = 20;
+        PhotonNetwork.SerializationRate = 10;
         PhotonNetwork.ConnectUsingSettings();
     }
 
     private void Start()
     {
         UsernameMenu.SetActive(true);
+
     }
 
     public override void OnConnectedToMaster()

@@ -11,12 +11,17 @@ public class cat_moves : MonoBehaviourPunCallbacks
     [SerializeField] private float jumpspeed;
     public Rigidbody2D mybody;
     public Animator myAnimator;
+    public BoxCollider2D mycollider;
     public GameObject PlayerCamera;
     public TextMeshProUGUI PlayerName;
     public SpriteRenderer sr;
 
     private void Awake()
-    {
+    {   
+        mybody = GetComponent<Rigidbody2D>();
+        myAnimator = GetComponent<Animator>();
+        mycollider=GetComponent<BoxCollider2D>();
+
         if (photonView.IsMine)
         {
             PlayerCamera.SetActive(true);
@@ -26,9 +31,10 @@ public class cat_moves : MonoBehaviourPunCallbacks
         {
             PlayerName.text = photonView.Owner.NickName;
             PlayerName.color = Color.red;
+            DisablePhysics();
+            //mybody.gravityScale = 0f;
         }
-        mybody = GetComponent<Rigidbody2D>();
-        myAnimator = GetComponent<Animator>();
+        
 
     }
     private void checkInput()
@@ -70,6 +76,7 @@ public class cat_moves : MonoBehaviourPunCallbacks
     }
 
 
+
     [PunRPC]
     private void FlipTrue()
     {
@@ -88,5 +95,31 @@ public class cat_moves : MonoBehaviourPunCallbacks
         mybody.velocity = new Vector2(mybody.velocity.x, jumpspeed);
     }
 
+    private void DisablePhysics()
+    {
+        // Desactivar el Rigidbody2D
+        if (mybody != null)
+        {
+            mybody.simulated = false;
+        }
+
+        // Desactivar todos los colliders en el objeto
+        Collider2D[] colliders = GetComponents<Collider2D>();
+        foreach (var collider in colliders)
+        {
+            collider.enabled = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!photonView.IsMine)
+        {
+            if (mycollider != null)
+            {
+                mycollider.isTrigger = true;
+            }
+        }
+    }
 
 }
