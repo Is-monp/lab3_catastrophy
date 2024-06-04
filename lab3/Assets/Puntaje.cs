@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 
 public class Puntaje : MonoBehaviour
 {
     private int score;  
-    public Text scoreText; 
+   
      void Start (){
          score = 0; 
     }
