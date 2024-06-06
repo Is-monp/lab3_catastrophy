@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - moneda
+  - cat_player
   layers:
   - Default
   - TransparentFX

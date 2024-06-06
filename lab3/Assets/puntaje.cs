@@ -5,18 +5,18 @@ using UnityEngine;
 
 public class Puntaje : MonoBehaviour
 {
-    private int score;  
+    private int puntaje;  
    
      void Start (){
-         score = 0; 
+         puntaje = 0; 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "moneda")
         {
-            score +=10; 
-            Debug.Log(score); 
+            puntaje +=10; 
+            Debug.Log(puntaje); 
 
         }
 
