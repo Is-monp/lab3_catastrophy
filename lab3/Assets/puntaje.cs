@@ -5,11 +5,11 @@ using Photon.Pun;
 
 public class Puntaje : MonoBehaviourPunCallbacks
 {
-    private int puntaje;  
+    private int puntaje;
 
-    void Start ()
+    void Start()
     {
-        puntaje = 0; 
+        puntaje = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,7 +23,7 @@ public class Puntaje : MonoBehaviourPunCallbacks
     [PunRPC]
     private void aumentcoin()
     {
-        puntaje += 10; 
-        Debug.Log(puntaje); 
+        puntaje += 10;
+        Debug.Log(puntaje);
     }
 }
