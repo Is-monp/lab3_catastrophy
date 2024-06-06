@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/testing.unity
     guid: 52a9a920684ac6c4abcdaf67f415eab5
+  - enabled: 1
+    path: Assets/Scenes/youwon.unity
+    guid: 3cd826cca7a544f4495fcae7a943050c
   m_configObjects: {}
