@@ -8,7 +8,7 @@ public class Jugando : MonoBehaviour
 
     void Start()
     {
-        string nombre = "EjemploNombre"; // Ingresa el nombre que deseas mostrar
+        string nombre = "vale"; // Ingresa el nombre que deseas mostrar
         int puntaje = 100; // Ingresa el puntaje que deseas mostrar
 
         nombreText.text = nombre;
