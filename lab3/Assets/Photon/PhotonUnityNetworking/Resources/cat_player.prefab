@@ -435,6 +435,7 @@ GameObject:
   - component: {fileID: 1909851940197553248}
   - component: {fileID: 5017625265845122406}
   - component: {fileID: 1155863756299959028}
+  - component: {fileID: 162542880294825217}
   m_Layer: 0
   m_Name: cat_player
   m_TagString: cat_player
@@ -706,3 +707,15 @@ MonoBehaviour:
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
+--- !u!114 &162542880294825217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9147335422071557960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f5753faa86e504f93e9862dce321db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
