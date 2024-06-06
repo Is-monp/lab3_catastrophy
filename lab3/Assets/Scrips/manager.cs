@@ -14,7 +14,7 @@ public class manager : MonoBehaviour
     }
     public void scores_button() 
     {
-        Debug.Log("im in scores");
+        SceneManager.LoadScene(3);
     }
     public void back_button()
     {

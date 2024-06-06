@@ -1,6 +1,10 @@
 using UnityEngine;
+
 using UnityEngine.UI;
+
 using System.Collections.Generic;
+
+
 
 public class Holder : MonoBehaviour
 
@@ -13,11 +17,16 @@ public class Holder : MonoBehaviour
     public GameObject Informacion;
 
 
+
     void Awake()
 
     {
+
         instance = this;
+
     }
+
+
 
     public void UpdateScores(List<KeyValuePair<string, int>> sortedScores)
     {
